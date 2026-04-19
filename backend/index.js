@@ -1,7 +1,10 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { sequelize } = require('./models');
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const app = express();
 app.use(cors());
@@ -14,7 +17,7 @@ app.use('/api/vault', require('./routes/vaultRoutes'));
 const start = async () => {
   try {
     await sequelize.sync();
-    app.listen(process.env.PORT || 3000, () => console.log('🚀 Serveur prêt'));
+    app.listen(process.env.PORT || 8080, () => console.log('🚀 Serveur prêt'));
   } catch (e) { console.error(e); }
 };
 

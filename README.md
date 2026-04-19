@@ -31,7 +31,7 @@ DB_PASS=admin
 
 # --- Sécurité & Serveur ---
 JWT_SECRET=une_cle_tres_longue_et_aleatoire
-PORT=3000
+PORT=8080
 ```
 
 > **Note** : Le serveur écoutera sur le port défini par la variable PORT (par défaut 3000).
