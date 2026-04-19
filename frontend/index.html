@@ -38,7 +38,10 @@
     </div>
 
     <script>
-        const API_URL = "http://localhost:8080/api";
+        // Détection dynamique de l'environnement
+        const API_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+            ? "http://localhost:8080/api"  // Dev local : on pointe vers le port du conteneur
+            : "/api";                      // Prod : URL relative (le Load Balancer gère le reste)
         let userToken = null;
         let masterKey = null;
         let vaultKey = null;
