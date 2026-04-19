@@ -34,7 +34,7 @@ JWT_SECRET=une_cle_tres_longue_et_aleatoire
 PORT=8080
 ```
 
-> **Note** : Le serveur écoutera sur le port défini par la variable PORT (par défaut 3000).
+> **Note** : Le serveur écoutera sur le port défini par la variable PORT (par défaut 8080).
 
 ## 🚀 Lancement
 
